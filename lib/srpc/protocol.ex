@@ -1,5 +1,15 @@
 defmodule SRPC.Protocol do
-  @static_keys [:codec, :method, :session, :code, :error, :timestamp, :trace]
+  @static_keys [
+    :codec,
+    :method,
+    :session,
+    :code,
+    :error,
+    :timestamp,
+    :trace,
+    :destination,
+    :source
+  ]
   @static_values [:json, :sproto, :protobuf, :raw, 0]
 
   def decode(pkg) do
