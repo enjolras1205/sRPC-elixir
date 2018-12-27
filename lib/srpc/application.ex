@@ -6,6 +6,7 @@ defmodule Srpc.Application do
   use Application
 
   def start(_type, _args) do
+    Srpc.Constants.init_const()
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: Srpc.Worker.start_link(arg)
